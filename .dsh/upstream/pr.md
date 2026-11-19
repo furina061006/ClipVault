@@ -1,7 +1,7 @@
 # Fix: poll the clipboard on the GUI thread
 
 Fixes the intermittent `SIGABRT` (`double free or corruption (fasttop)`)
-reported in #<issue-number>.
+reported in #1.
 
 ## Why
 
