@@ -14,6 +14,13 @@ import atexit
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from clipvault import __version__
+
+# Answer --version before importing Qt / enabling diagnostics: a plain version
+# check should not create log files or a crash-dump entry.
+if "--version" in sys.argv[1:]:
+    print(f"ClipVault {__version__}")
+    sys.exit(0)
+
 from clipvault import diagnostics
 
 # Must be enabled before Qt is imported so that a crash inside Qt/C++
