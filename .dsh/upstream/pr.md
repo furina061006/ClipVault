@@ -1,7 +1,9 @@
 # Fix: poll the clipboard on the GUI thread
 
-Fixes the intermittent `SIGABRT` (`double free or corruption (fasttop)`)
-reported in #1.
+Fixes #1
+
+Intermittent `SIGABRT` (`double free or corruption (fasttop)`) caused by the
+clipboard watcher polling from a `QThread`.
 
 ## Why
 
